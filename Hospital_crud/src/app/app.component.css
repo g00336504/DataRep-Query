@@ -1,0 +1,32 @@
+/*-----Comment----- */
+/*-----Here i edited the css for the whole add to an aqua colour----- */
+.mat-toolbar.mat-primary[_ngcontent-c0] {
+    background: #57B7DD;
+    color: #fff;
+    position: align right;
+}
+/*-----Here i edited the css for the buttons which appear at at the top of the Website----- */
+.mat-button, .mat-flat-button, .mat-icon-button, .mat-stroked-button {
+    box-sizing: border-box;
+    position: relative;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    outline: 0;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+    display: inline-block;
+    white-space: nowrap;
+    text-decoration: none;
+    vertical-align: baseline;
+    text-align: center;
+    margin: 45px;
+    min-width: 88px;
+    line-height: 36px;
+    padding: 0 16px;
+    font-size: 24px;
+    border-radius: 2px;
+    overflow: visible;
+}

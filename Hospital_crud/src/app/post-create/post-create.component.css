@@ -1,0 +1,11 @@
+
+mat-form-field,
+textarea {
+  width: 100%;
+}
+.mat-toolbar.mat-primary {
+  background: #57B7DD;
+  color: #fff;
+}
+.background {background: #57B7DD;
+}

@@ -1,0 +1,75 @@
+<mat-toolbar color="primary">Update Patient Details</mat-toolbar>
+<mat-card>
+  <form (submit)="onEditPost(postForm)" #postForm="ngForm">
+    <h2>First Name</h2>
+    <mat-form-field>
+      <input
+        matInput
+        type="text"
+        name="title"
+        ngModel={{post.title}}
+        required
+        #title="ngModel"
+        >
+    </mat-form-field>
+    <h2>Last Name</h2>
+    <mat-form-field>
+      <textarea
+        matInput
+        name="content"
+        ngModel={{post.content}}
+        required
+        #content="ngModel">
+      </textarea>
+      <mat-error *ngIf="content.invalid">Please enter a post title.</mat-error>
+    </mat-form-field>
+    <h2>Reference Number</h2>
+    <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="reference"
+          ngModel={{post.reference}}
+          required
+          #title="ngModel"
+          >
+      </mat-form-field>
+      <h2>Date of Birth</h2>
+    <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="DOB"
+          ngModel={{post.DOB}}
+          required
+          #title="ngModel"
+          >
+      </mat-form-field>
+      <h2>Name of Doctor</h2>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="Doctor"
+          ngModel={{post.Doctor}}
+          required
+          #title="ngModel"
+          >
+      </mat-form-field>
+      <h2>Patient Diagnosis</h2>
+      <mat-form-field>
+        <input
+          matInput
+          type="text"
+          name="Diagnosis"
+          ngModel={{post.Diagnosis}}
+          required
+          #title="ngModel"
+          >
+      </mat-form-field>
+    <button
+      mat-raised-button
+      color="accent"
+      type="submit">Update Patient Details</button>
+  </form>
+</mat-card>

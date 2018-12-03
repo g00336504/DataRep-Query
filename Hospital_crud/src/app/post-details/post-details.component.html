@@ -1,0 +1,31 @@
+
+<mat-toolbar color="primary">Current Patients in Hospital</mat-toolbar>
+<mat-accordion multi="true" *ngIf="posts.length > 0">
+    <mat-expansion-panel [expanded]="true" *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+      {{ post.title }}
+      </mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+      <p>{{ post.content }}</p>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+        <p>  {{ post.reference }}</p>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+        <p>  {{ post.DOB }}</p>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+        <p>  {{ post.Doctor }}</p>
+      </mat-expansion-panel-header>
+      <mat-expansion-panel-header>
+        <p>  {{ post.Diagnosis }}</p>
+      </mat-expansion-panel-header>
+      
+    
+      <mat-action-row>
+      <button mat-button [routerLink]="['/edit', post._id]" color=#0099ff>Edit patient Details</button>
+      <button mat-button (click)="onDelete(post._id)" color="warn">Discharge Patient</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="posts.length <= 0">No Patients Currently in the Hospital!</p> 

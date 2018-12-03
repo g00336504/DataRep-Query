@@ -1,0 +1,74 @@
+<mat-toolbar color="primary">Admit New Patient to the Hospital</mat-toolbar>
+<mat-card>
+    
+  <form (submit)="onAddPost(postForm)" #postForm="ngForm">
+    <mat-form-field>
+        <h2>First-Name</h2>
+      <textarea
+        matInput
+        name="content"
+        ngModel
+        required
+        #content="ngModel"></textarea>
+      <mat-error *ngIf="content.invalid">Please enter your first name.</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+        <h2>Last-Name</h2>
+        <input
+          matInput
+          type="text"
+          name="title"
+          ngModel
+          required
+          minlength="3"
+          #title="ngModel">
+        <mat-error *ngIf="title.invalid">Please enter your last Name.</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+          <h2>Reference Number</h2>
+          <input
+            matInput
+            type="text"
+            name="reference"
+            ngModel
+            required
+            minlength="5"
+            #reference="ngModel">
+          <mat-error *ngIf="title.invalid">Please enter your reference number.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <h2>Date of Birth</h2>
+          <textarea
+            matInput
+            name="DOB"
+            ngModel
+            required
+            #DOB="ngModel"></textarea>
+          <mat-error *ngIf="content.invalid">Please enter your Date of Birth.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <h2>Local GP</h2>
+          <textarea
+            matInput
+            name="Doctor"
+            ngModel
+            required
+            #Doctor="ngModel"></textarea>
+          <mat-error *ngIf="content.invalid">Please enter your Doctors name.</mat-error>
+        </mat-form-field>
+        <mat-form-field>
+            <h2>Diagnosis</h2>
+          <textarea
+            matInput
+            name="Diagnosis"
+            ngModel
+            required
+            #Diagnosis="ngModel"></textarea>
+          <mat-error *ngIf="content.invalid">What is your illness ?</mat-error>
+        </mat-form-field>
+    <button
+    mat-stroked-button
+      color="red"
+      type="submit">Admit New Patient</button>
+  </form>
+</mat-card>
